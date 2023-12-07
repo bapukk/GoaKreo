@@ -44,8 +44,8 @@ $events = query("SELECT * FROM event");
                     <td><?= $event["nama"]; ?></td>
                     <td><?= $event ["deskripsi"]; ?></td>
                     <td><?= $event["tanggal"]; ?></td>
-                    <td><a href="edit.php?id=<?= $event["id"]; ?> & <?= $event["gambar"]; ?> "><button class="button3">edit</button></a></td>
-                    <td><button class="button4">delete</button></td>
+                    <td><a href="edit.php?id=<?= $event["id"]; ?> & gambar=<?= $event['gambar']; ?>"><button class="button3">edit</button></a></td>
+                    <td><a href="hapus.php" onclick="return confirm('Apakan anda yakin?')"><button class="button4">delete</button></a></td>
                 </tr>
                 <?php $i++; ?>
                 <?php endforeach; ?>  

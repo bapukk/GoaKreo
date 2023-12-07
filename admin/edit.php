@@ -15,6 +15,7 @@ $gambarLama = $_GET["gambar"];
 //ambil query dari event
 $evn = query("SELECT * FROM event WHERE ID = $id")[0];
 
+
 //cek apakah tombol submit sudah ditekan
 if (isset($_POST["submit"])) {
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ( isset($_SESSION["login"])) {
+if (isset($_SESSION["login"])) {
     header("Location: admin.php");
     exit;
 }
@@ -42,13 +42,9 @@ if (isset($_POST["login"])) {
 
 <body>
 
-    <h1>Halaman Login</h1>
+    <!-- <h1>Halaman Login</h1> -->
 
-    <?php if( isset($error)) : ?>
-        <p style="color : red; font-style: italic;">username/password error</p>
-    <?php endif; ?>
-
-    <form action="" method="post">
+    <!-- <form action="" method="post">
 
         <ul>
             <li>
@@ -68,4 +64,36 @@ if (isset($_POST["login"])) {
 
 </body>
 
-</html>
+</html> -->
+
+    <!-- == -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Halaman Login</title>
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="login form">
+                <header>Form Login</header>
+                <form action="" method="post">
+                    <input type="text" name="username" id="username" placeholder="Masukkan Email">
+                    <input type="password" name="password" id="password" placeholder="Masukkan Password">
+                    <?php if (isset($error)): ?>
+                        <div class="error">
+                            <p>username/password salah</p>
+                        </div>
+                    <?php endif; ?>
+                    <input type="submit" name="login" value="login" class="button">
+                </form>
+            </div>
+        </div>
+    </body>
+
+    </html>

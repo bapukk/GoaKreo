@@ -5,12 +5,12 @@
 body {
   display: flex;
   justify-content: center;
-  background-image: url(brushed_alu.png);
+  background-image: url(45degreee_fabric.jpg);
   background-attachment: fixed;
 }
 
 .container {
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0;
   width: 92%;
   height: auto;
   background-color: whitesmoke;
@@ -78,9 +78,9 @@ body {
 } 
 
 .button3 {
-  background-color: #989898;
+  background-color: black;
   border: none;
-  color: black;
+  color: white;
   padding: 8px 19px;
   border-radius: 3px;
   text-align: center;
@@ -91,9 +91,9 @@ body {
   cursor: pointer;
 }
 .button4 {
-  background-color: #fffb01; 
+  background-color: #e0182c; 
   border: none;
-  color: black;
+  color: white;
   padding: 8px 12px;
   border-radius: 3px;
   text-align: center;
@@ -134,7 +134,16 @@ tr td {
   text-align: center;
 }
 
-@media(max-width: 1100px){
+@media(max-width: 640px){
+  .tabel{
+    overflow-y: auto;
+  }
+  .container {
+    margin: 0;
+    width: 100%;
+  }
+}
+/* @media(max-width: 1100px){
   .button, .button2, .button3, .button4 {
       font-size: 12px;
       padding: 6px 9px;
@@ -206,4 +215,4 @@ tr td {
       font-size: 5px;
       padding: 2px 4px;
   }
-}
+} */
