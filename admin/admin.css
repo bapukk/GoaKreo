@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url(brushed_alu.png);
+  background-attachment: fixed;
+}
+
+.container {
+  margin: 1rem 0 1rem 0;
+  width: 92%;
+  height: auto;
+  background-color: whitesmoke;
+  padding: 0;
+  border-top: 2px solid #008CBA;
+  border-bottom: 2px solid #008CBA;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(189,189,189,1);
+  box-shadow: 0px 0px 12px 0px rgba(189,189,189,1);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.logout {
+  text-align: right;
+  margin: 0.4rem 0.5rem 0 0;
+  height: 2rem;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  background-color: rgb(241, 241, 241);
+  -webkit-box-shadow: 0px 1px 3px 0px rgba(189,189,189,1);
+  -moz-box-shadow: 0px 1px 3px 0px rgba(189,189,189,1);
+  box-shadow: 0px 1px 3px 0px rgba(189,189,189,1);
+}
+
+.button {
+      background-color: white;
+      color: black;
+      border: 1px solid #555555;
+      border-radius: 20px;
+      padding: 3px 10px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 13px;
+      margin: 4px 10px;
+      transition-duration: 0.4s;
+      cursor: pointer;   
+}
+
+.button2 {
+  background-color: #008CBA;
+  color: whitesmoke;
+  border: none;
+  padding: 7px 8px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 13.5px 5px 1%;
+  transition-duration: 0.4s;
+  cursor: pointer;   
+} 
+
+.button3 {
+  background-color: #989898;
+  border: none;
+  color: black;
+  padding: 8px 19px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button4 {
+  background-color: #fffb01; 
+  border: none;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.tabel {
+  display: flex;
+  justify-content: center;
+} 
+
+table, td, th {
+  border: 1px solid rgba(30, 30, 30, 0.475)
+}
+
+table {
+  width: 98%;
+  height: auto;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th {
+  background-color: #008CBA;
+  color: whitesmoke;
+  
+}
+
+th, td {
+  padding: 10px;
+}
+
+tr td {
+  text-align: center;
+}
+
+@media(max-width: 1100px){
+  .button, .button2, .button3, .button4 {
+      font-size: 12px;
+      padding: 6px 9px;
+  }
+  .tabel {
+      font-size: 12px;
+  }
+  .title {
+      font-size: 13px;
+  }
+}
+
+@media (max-width: 780px) {
+  .button, .button2, .button3, .button4 {
+      font-size: 9px;
+      padding: 6px 9px;
+  }
+  table, td, th {
+      border: 0.9px solid rgba(30, 30, 30, 0.475);
+      font-size: 9px;
+  }
+  .title {
+      font-size: 10px;
+  }
+  #gambar {
+      width: 30px;
+  }
+  .container {
+      border-top: 2px solid #008CBA;
+      border-bottom: 2px solid #008CBA;
+      margin: 0;
+      width: 100%;
+  }
+}
+
+@media (max-width: 530px ) {
+  .button, .button2, .button3, .button4 {
+      font-size: 13px;
+      padding: 3px 6px;
+  }
+  #gambar {
+      width: 20px;
+  }
+  th, td {
+      padding: 3px;
+  }
+  .title {
+      font-size: 8px;
+  }
+  table, td, th {
+      border: 0.6px solid rgba(30, 30, 30, 0.475);
+      font-size: 13px ;
+  }
+  .container{
+      margin: 0;
+      width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  table, th, td {
+      border: 0.3px solid  rgba(30, 30, 30, 0.475);
+      font-size: 5px;
+  }
+  .title {
+      font-size: 6px;
+  }
+  .button, .button2, .button3, .button4 {
+      font-size: 5px;
+      padding: 2px 4px;
+  }
+}
