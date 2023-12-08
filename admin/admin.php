@@ -43,7 +43,7 @@ $events = query("SELECT * FROM event");
                     <td><img src="../img/<?= $event["gambar"]; ?>" alt="" id="gambar" width="60"></td>
                     <td><?= $event["nama"]; ?></td>
                     <td><?= $event ["deskripsi"]; ?></td>
-                    <td><?= $event["tanggal"]; ?></td>
+                    <td><?= date('d/m/Y', strtotime($event["tanggal"])); ?></td>
                     <td><a href="edit.php?id=<?= $event["id"]; ?> & gambar=<?= $event['gambar']; ?>"><button class="button3">edit</button></a></td>
                     <td><a href="hapus.php" onclick="return confirm('Apakan anda yakin?')"><button class="button4">delete</button></a></td>
                 </tr>

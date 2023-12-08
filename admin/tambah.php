@@ -29,7 +29,7 @@ if (isset($_POST["submit"])) {
     }
 }
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -65,4 +65,58 @@ if (isset($_POST["submit"])) {
     </form>
 </body>
 
+</html> -->
+
+<!-- == -->
+
+<!DOCTYPE html>s
+<html>
+<head>
+    <link rel="stylesheet" href="tambah.css">
+    <title>Tambah Data</title>
+</head>
+<body>
+    <main class="table">
+        <!-- <section class="headtab">
+            <h1><a href="">Kembali</a></h1>
+        </section> -->
+        <button class="button1">Kembali</button>
+    <br><br>
+    <form action="" method="post" enctype="multipart/form-data">
+    <table>
+        <thead>
+            <tr>
+                <th colspan="2" class="tambah"><center>TAMBAH</center></th>
+            </tr>
+        </thead>
+        <!-- <section class="bodtab"> -->
+        <tbody class="bodtab">
+        <tr>
+            <th><center>GAMBAR</center></th>
+            <td><input type="file" name="gambar" id="gambar" accept="image/*"></td>
+        </tr>
+        <tr>
+            <th><center>JUDUL</center></th>
+            <td><input id="judul" type="text"></td><!-- <textarea name="judul" id="judul" cols="30" rows=""></textarea> -->
+        </tr>
+        <tr>
+            <th><center>DESKRIPSI</center></th>
+            <td><textarea name="deskripsi" id="deskripsi" cols="90" rows="7" style="resize: none;"></textarea></td>
+        </tr>
+        <tr>
+            <th><center>TANGGAL</center></th>
+            <td><input type="date" name="tanggal" id="tanggal"></td>
+        </tr>
+    </tbody>
+        <!-- </section> -->
+        <!-- <section class="footab"> -->
+            <!-- </section> -->
+        </table>
+    </form>
+        <!-- <tfoot class="footab"> -->
+            <!-- <td colspan="2" style="text-align: end; border: 0;"><h1><a href="">Selesai</a></h1></td> -->
+        <!-- </tfoot> -->
+        <button class="button2" type="submit" name="submit">Selesai</button>
+    </main>
+</body>
 </html>

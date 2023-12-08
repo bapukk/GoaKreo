@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if( !isset($_SESSION["login"])){
+if (!isset($_SESSION["login"])) {
     header("Location: login.php");
 }
 
@@ -26,8 +26,8 @@ if (isset($_POST["submit"])) {
             alert('data berhasil diedit');
             document.location.href = 'admin.php';
         </script>
-        ";         
-    } else { 
+        ";
+    } else {
         echo "
         <script>
             alert('data gagal diedit');
@@ -35,9 +35,9 @@ if (isset($_POST["submit"])) {
         </script>
         ";
     }
-} 
+}
 ?>
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -74,6 +74,72 @@ if (isset($_POST["submit"])) {
             </li>
         </ul>
     </form>
+</body>
+
+</html> -->
+
+<!-- == -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="edit.css">
+    <title>Tambah Data</title>
+</head>
+
+<body>
+    <main class="table">
+        <button class="button1">Kembali</button>
+        <br><br>
+        <form action="" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="id" value="<?= $evn["id"]; ?>">
+            <input type="hidden" name="gambarLama" value="<?= $gambarLama; ?>">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2" class="edit">
+                            <center>EDIT</center>
+                        </th>
+                    </tr>
+                </thead>
+                <!-- <section class="bodtab"> -->
+                <tbody class="bodtab">
+                    <tr>
+                        <th>
+                            <center>GAMBAR</center>
+                        </th>
+                        <td>
+                        <img src="../img/<?= $evn["gambar"]; ?>" width="60"><br>
+                            <input type="file" name="gambar" id="gambar" accept="image/*">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <center>JUDUL</center>
+                        </th>
+                        <td>
+                        <input type="text" id="nama" name="nama" autocomplete="off" value="<?= $evn["nama"]; ?>">
+                    </td>
+                        <!-- <textarea name="judul" id="judul" cols="30" rows=""></textarea> -->
+                    </tr>
+                    <tr>
+                        <th>
+                            <center>DESKRIPSI</center>
+                        </th>
+                        <td>
+                        <textarea type="textarea" cols="90" rows="7" id="deskripsi" name="deskripsi" style="resize: none"><?= $evn["deskripsi"]; ?></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <center>TANGGAL</center>
+                        </th>
+                        <td><input type="date" name="tanggal" id="tanggal" autocomplete="off" value="<?= $evn["tanggal"]; ?>"></td>
+                    </tr>
+                </tbody>
+        </form>
+        <button class="button2" type="submit" name="submit">Selesai</button>
+    </main>
 </body>
 
 </html>

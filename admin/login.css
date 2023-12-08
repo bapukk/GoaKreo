@@ -8,7 +8,7 @@
 body{
   min-height: 100vh;
   width: 100%;
-  background-image: url(45degreee_fabric.jpg);
+  background-image: url(asset/brushed_alu.png);
 }
 .container{
   position: absolute;
