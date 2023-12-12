@@ -37,109 +37,74 @@ if (isset($_POST["submit"])) {
     }
 }
 ?>
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>edit</title>
-</head>
-
-<body>
-    <h1>INI HALAMAN EDIT</h1>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="id" value="<?= $evn["id"]; ?>">
-        <input type="hidden" name="gambarLama" value="<?= $gambarLama; ?>">
-        <ul>
-            <li>
-                <label for="gambar">Gambar : </label><br>
-                <img src="../img/<?= $evn["gambar"]; ?>" width="60"><br>
-                <input type="file" id="gambar" name="gambar" accept="image/*">
-            </li>
-            <li>
-                <label for="nama">Nama : </label>
-                <input type="text" id="nama" name="nama" autocomplete="off" value="<?= $evn["nama"]; ?>">
-            </li>
-            <li>
-                <label for="deskripsi">Deskripsi : </label>
-                <input type="text" id="deskripsi" name="deskripsi" autocomplete="off" value="<?= $evn["deskripsi"]; ?>">
-            </li>
-            <li>
-                <label for="tanggal">Tanggal : </label>
-                <input type="text" id="tanggal" name="tanggal" autocomplete="off" value="<?= $evn["tanggal"]; ?>">
-            </li>
-            <li>
-                <button type="submit" name="submit">edit Data</button>
-            </li>
-        </ul>
-    </form>
-</body>
-
-</html> -->
-
-<!-- == -->
 <!DOCTYPE html>
 <html>
 
 <head>
     <link rel="stylesheet" href="edit.css">
-    <title>Tambah Data</title>
+    <title>Edit Data</title>
 </head>
 
-<body>
-    <main class="table">
-        <button class="button1">Kembali</button>
-        <br><br>
-        <form action="" method="post" enctype="multipart/form-data">
-            <input type="hidden" name="id" value="<?= $evn["id"]; ?>">
-            <input type="hidden" name="gambarLama" value="<?= $gambarLama; ?>">
-            <table>
-                <thead>
-                    <tr>
-                        <th colspan="2" class="edit">
-                            <center>EDIT</center>
-                        </th>
-                    </tr>
-                </thead>
-                <!-- <section class="bodtab"> -->
-                <tbody class="bodtab">
-                    <tr>
-                        <th>
-                            <center>GAMBAR</center>
-                        </th>
-                        <td>
-                        <img src="../img/<?= $evn["gambar"]; ?>" width="60"><br>
-                            <input type="file" name="gambar" id="gambar" accept="image/*">
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <center>JUDUL</center>
-                        </th>
-                        <td>
-                        <input type="text" id="nama" name="nama" autocomplete="off" value="<?= $evn["nama"]; ?>">
-                    </td>
-                        <!-- <textarea name="judul" id="judul" cols="30" rows=""></textarea> -->
-                    </tr>
-                    <tr>
-                        <th>
-                            <center>DESKRIPSI</center>
-                        </th>
-                        <td>
-                        <textarea type="textarea" cols="90" rows="7" id="deskripsi" name="deskripsi" style="resize: none"><?= $evn["deskripsi"]; ?></textarea>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>
-                            <center>TANGGAL</center>
-                        </th>
-                        <td><input type="date" name="tanggal" id="tanggal" autocomplete="off" value="<?= $evn["tanggal"]; ?>"></td>
-                    </tr>
-                </tbody>
-        </form>
-        <button class="button2" type="submit" name="submit">Selesai</button>
-    </main>
+<body class="w3-container">
+    <div class="container">
+        <div class="slidein-from-left">
+            <div class="slidein-from-right">
+                <main class="table">
+                    <a href="admin.php"><button class="button1">Kembali</button></a>
+                    <br><br>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="id" value="<?= $evn["id"]; ?>">
+                        <input type="hidden" name="gambarLama" value="<?= $gambarLama; ?>">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="tambah">
+                                        <center>Edit</center>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="bodtab">
+                                <tr>
+                                    <th>
+                                        <center>GAMBAR</center>
+                                    </th>
+                                    <td>
+                                        <img src="../img/<?= $evn["gambar"]; ?>" width="60"><br>
+                                        <input type="file" name="gambar" id="gambar" accept="image/*">
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <center>JUDUL</center>
+                                    </th>
+                                    <td><input id="judul" name="nama" type="text" value="<?= $evn["nama"]; ?>"></td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <center>DESKRIPSI</center>
+                                    </th>
+                                    <td><textarea name="deskripsi" id="deskripsi" cols="90" rows="7"
+                                            style="resize: none;"><?= $evn["deskripsi"]; ?></textarea></td>
+                                </tr>
+
+                                <tr>
+                                    <th>
+                                        <center>TANGGAL</center>
+                                    </th>
+                                    <td><input type="date" name="tanggal" id="tanggal" value="<?= $evn["tanggal"]; ?>"></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <button type="submit" name="submit" class="button2">selesai</button>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

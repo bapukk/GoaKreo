@@ -30,7 +30,6 @@ if (isset($_POST["login"])) {
     $error = true;
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,62 +37,25 @@ if (isset($_POST["login"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 
 <body>
-
-    <!-- <h1>Halaman Login</h1> -->
-
-    <!-- <form action="" method="post">
-
-        <ul>
-            <li>
-                <label for="username"> username : </label>
-                <input type="text" name="username" id="username" autocomplete="off">
-            </li>
-            <li>
-                <label for="password"> Password : </label>
-                <input type="password" name="password" id="password">
-            </li>
-            <li>
-                <button type="submit" name="login">Login</button>
-            </li>
-        </ul>
-
-    </form>
-
+    <div class="container">
+        <div class="login form">
+            <header>Login</header>
+            <form action="" method="post">
+                <input type="text" name="username" id="username" placeholder="Masukkan Email">
+                <input type="password" name="password" id="password" placeholder="Masukkan Password">
+                <?php if (isset($error)): ?>
+                    <div class="error">
+                        <p>username/password salah</p>
+                    </div>
+                <?php endif; ?>
+                <input type="submit" name="login" value="login" class="button">
+            </form>
+        </div>
+    </div>
 </body>
 
-</html> -->
-
-    <!-- == -->
-
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Halaman Login</title>
-        <link rel="stylesheet" href="login.css">
-    </head>
-
-    <body>
-        <div class="container">
-            <div class="login form">
-                <header>Form Login</header>
-                <form action="" method="post">
-                    <input type="text" name="username" id="username" placeholder="Masukkan Email">
-                    <input type="password" name="password" id="password" placeholder="Masukkan Password">
-                    <?php if (isset($error)): ?>
-                        <div class="error">
-                            <p>username/password salah</p>
-                        </div>
-                    <?php endif; ?>
-                    <input type="submit" name="login" value="login" class="button">
-                </form>
-            </div>
-        </div>
-    </body>
-
-    </html>
+</html>

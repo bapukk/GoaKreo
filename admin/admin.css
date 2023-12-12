@@ -143,33 +143,33 @@ tr td {
     width: 100%;
   }
 }
-/* @media(max-width: 1100px){
+@media(max-width: 1100px){
   .button, .button2, .button3, .button4 {
-      font-size: 12px;
+      font-size: 100%;
       padding: 6px 9px;
   }
   .tabel {
-      font-size: 12px;
+      font-size: 100%;
   }
   .title {
-      font-size: 13px;
+      font-size: 100%;
   }
 }
 
 @media (max-width: 780px) {
   .button, .button2, .button3, .button4 {
-      font-size: 9px;
+      font-size: 75%;
       padding: 6px 9px;
   }
   table, td, th {
       border: 0.9px solid rgba(30, 30, 30, 0.475);
-      font-size: 9px;
+      font-size: 75%;
   }
   .title {
-      font-size: 10px;
+      font-size: 75%;
   }
   #gambar {
-      width: 30px;
+      width: 60px;
   }
   .container {
       border-top: 2px solid #008CBA;
@@ -181,7 +181,7 @@ tr td {
 
 @media (max-width: 530px ) {
   .button, .button2, .button3, .button4 {
-      font-size: 13px;
+      font-size: 62.5%;
       padding: 3px 6px;
   }
   #gambar {
@@ -191,11 +191,11 @@ tr td {
       padding: 3px;
   }
   .title {
-      font-size: 8px;
+      font-size: 62.5%;
   }
   table, td, th {
       border: 0.6px solid rgba(30, 30, 30, 0.475);
-      font-size: 13px ;
+      font-size: 62.5% ;
   }
   .container{
       margin: 0;
@@ -206,13 +206,13 @@ tr td {
 @media (max-width: 360px) {
   table, th, td {
       border: 0.3px solid  rgba(30, 30, 30, 0.475);
-      font-size: 5px;
+      font-size: 55%;
   }
   .title {
-      font-size: 6px;
+      font-size: 55%;
   }
   .button, .button2, .button3, .button4 {
-      font-size: 5px;
+      font-size: 55%;
       padding: 2px 4px;
   }
-} */
+}

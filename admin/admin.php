@@ -27,7 +27,7 @@ $events = query("SELECT * FROM event");
                 <a href="tambah.php"><button class="button2">Tambah</button></a>
             </div>
         <div class="tabel">
-            <table>
+            <table style="overflow-x:auto;">
                 <tr>
                     <th>NO</th>
                     <th>GAMBAR</th>
@@ -40,7 +40,7 @@ $events = query("SELECT * FROM event");
                 <?php foreach( $events as $event ) : ?>
                 <tr>
                     <td><?= $i; ?></td>
-                    <td><img src="../img/<?= $event["gambar"]; ?>" alt="" id="gambar" width="60"></td>
+                    <td><img src="../img/<?= $event["gambar"]; ?>" alt="" id="gambar" width="90"></td>
                     <td><?= $event["nama"]; ?></td>
                     <td><?= $event ["deskripsi"]; ?></td>
                     <td><?= date('d/m/Y', strtotime($event["tanggal"])); ?></td>
