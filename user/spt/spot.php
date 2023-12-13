@@ -12,14 +12,16 @@
     
     <!-- Style -->
     <script src="https://unpkg.com/feather-icons"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="spot.css">
 
 </head>
 <body>
     <div class="container">
         
         <div class="header">
-            <a href="#home" id="logo">GOA KREO</a>
+            <a href="#home" id="logo">
+                <span class="goa">GOA</span> <span class="kreo">KREO</span>
+            </a>            
             <nav class="navbar">
                 <ul class="nav">
                     <li><a href="index.php">Home</a></li>
@@ -31,6 +33,8 @@
             <a href="#" id="line-menu"><i data-feather="menu"></i></a>
         </div>
 
+        <button id="scroll-to-top" onclick="scrollToTop()">^</button>
+
         <div class="empty"></div>
         <!-- content 1 -->
         <div class="section">
@@ -39,7 +43,6 @@
                 <h1>IKON GOA KREO</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur recusandae asperiores adipisci qui amet, nulla, vel, ex id minima sed modi unde deserunt obcaecati odit voluptate dolorum! Nesciunt, fugit itaque.
             </div>
-            <!-- <img src="../AREA SPOT/ASSET/ikon_goakreo.jpg" alt=""> -->
         </p>
         </div>
         <!-- content 1 -->
@@ -62,7 +65,6 @@
                 <h1>TANGGA GOA KREO</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aperiam, distinctio soluta cumque necessitatibus quis sequi aut sunt ducimus molestias asperiores vero tempora harum quam dicta quae, odio similique culpa.
             </div>
-            <!-- <img src="asset/tangga_goakreo.jpg" alt=""> -->
         </p>
         </div>
         <!-- content 3 -->
@@ -85,7 +87,6 @@
                 <h1>GOA LANDAK</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora culpa rem beatae soluta asperiores at enim numquam adipisci provident illum. Tenetur non et magnam ratione voluptatem sed saepe vero corporis?
             </div>
-            <!-- <img src="asset/pic_goalandak.jpg" alt=""> -->
         </p>
         </div>
         <!-- content 5 -->

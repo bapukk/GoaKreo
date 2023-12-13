@@ -6,12 +6,12 @@
     border: none;
     text-decoration: none;
     list-style: none;
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
     color: #727272;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(asset/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,8 +24,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(9, 9, 9, 0.607);
-    border-bottom: 1px solid #fff;
+    background-color: #5e7c60;
     align-items: center;
     position: fixed;
     top: 0;
@@ -39,7 +38,7 @@ body {
     font-weight: 700;
     padding: 5px;
     padding-left: 20px;
-    color: #fff;
+    color: #ffff;
 }
 
 .navbar .nav {
@@ -57,25 +56,31 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #727272;
+    color: #333;
 }
 
 #line-menu {
     display: none;
-    color: #fff;
+    color: #000;
     padding: 5px;
 }
 .atas {
-    color: white;
-    padding-left: 70px;
-    font-size: 1.5rem;
-    background-color: rgba(127, 117, 117, 1);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    color: #000;
+    font-size: 3rem;
+    background-color: #D5D6C6;
+    padding: 20px 0 0 0;
+    margin-top: 15px;
+    border-top: 3px solid #5e7c60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.atas h4{
+    color: #5e7c60;
 }
 .tengah {
 
-    color: white;
+    color: #333;
     padding-left: 70px;
     font-size: 1.5rem;
     background-color: rgb(91, 73, 73);
@@ -83,27 +88,30 @@ body {
     padding-bottom: 20px;
 }
 /* ----------------------------------------------------------------------------home------------------------------------------------------- */
-.wisata {
-    text-align: center;
-    font-size: 35px;
-    color: #fff;
-    margin-top: 100px;
-    margin-bottom: 100px;
 
-}
 .hero {
-    width: 100%;
+    margin: 71px 0.5% 0 0.5%;
+    width: 99%;
     height: 80vh;
     display: flex;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #f2f9f6;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 .about {
-    width: 100%;
+    width: 99%;
     height: 100vh;
+    margin: 15px 0.5% 0 0.5%;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: #F9F5F2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 }
 .about .legend .desa:nth-child(1),
 .hero .heading .desc:nth-child(1) {
@@ -111,10 +119,11 @@ body {
 }
 .desc {
     text-align: center;
-    color: #fff;
+    color: #333;
 } 
 .desa {
     text-align: center;
+    color: #333;
 } 
 .desc h4 {
     font-size: 30px;
@@ -163,21 +172,22 @@ body {
 /* --------------------------------------------------------------------------slides --------------------------------------------------------*/
 .slide-container {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px 0;
+    background-color: #D5D6C6;
+    padding: 20px 0 40px 0;
+    border-bottom: 3px solid #5e7c60;
 }
 .slide-content {
     margin: 0 40px;
     overflow: hidden;
-    border-radius: 25px 0 25px 0;
+    border-radius: 25px 25px;
 }
 .card-wrapper {
     width: 100%;
 }
-.card {
+.card { 
     width: 300px;
-    border-radius: 25px 0 25px 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px 25px;
+    background-color: #F9F5F2;
 }
 .image-content,
 .card-content {
@@ -200,18 +210,18 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    border-radius: 25px 0 25px 0;
+    border-radius: 25px 25px 0px 0px;
 }
 .card-image .card-img {
     height: 100%;
     widows: 100%;
     object-fit: cover;
-    border-radius: 25px 0 25px 0;
+    border-radius: 25px 0px 25px 0px;
 }
 .name {
     font-size: 18px;
     font-weight: 500;
-    color: #fff;
+    color: #5e7c60;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -223,7 +233,7 @@ body {
 .card-content  p {
     margin: 0 auto;
     font-size: 14px;
-    color: #fff;
+    color: #000;
     text-align: center;
     line-height: 2;
     width: 300px;
@@ -240,7 +250,7 @@ body {
     font-size: 10px;
     font-weight: 500;
     color: #FFF;
-    background-color: rgba(207, 194, 194, 0.5);
+    background-color: #5e7c60;
     cursor: pointer;
     transition: all 0.3 ease;
     border-radius: 100px;
@@ -250,11 +260,11 @@ body {
     background: #333;
 }
 .swiper-navBtn {
-    color: #6E93f7;
+    color: #5e7c60;
     transition: color 0.3 ease;
 }
 .swiper-navBtn:hover {
-    color: #4070FA;
+    color: #F9F5F2;
 }
 .swiper-navBtn:before,
 .swiper-navBtn:after {
@@ -267,11 +277,11 @@ body {
     left: 0;
 }
 .swiper-pagination-bullet {
-    background-color: #6E93f7;
+    background-color: #5e7c60;
     opacity: 1;
 }
 .swiper-pagination-bullet-active {
-    color: #010204;
+    background-color: #f2f9f6;
 }
 /*------------------------------------------------------------------------- review-slides ---------------------------------------------------*/
 .popup {
@@ -281,16 +291,17 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    margin-top: 10px;
     margin-bottom: 40px;
+    overflow-y: scroll;
 
-    z-index: 200;
+    z-index: 10000;
     opacity: 0; 
     visibility: hidden;
     transition: all 0.3s;
 }
 .popup-content {
-    width: 50%;
+    width: 60%;
+    height: 700px;
     background-color: #fff;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     margin-top: 36px;
@@ -315,7 +326,7 @@ body {
 .popup-header {
     text-align: center;
     text-transform: uppercase;
-    color: #555;
+    color: #5e7c60;
     margin-bottom: 26px;
 }
 .popup-header h2 {
@@ -325,7 +336,7 @@ body {
 .popup-des {
     text-align: left;
     text-transform: capitalize;
-    color: #555;
+    color: #5e7c60;
     margin-bottom: 36px;
 }
 .popup-des h3 {
@@ -336,12 +347,13 @@ body {
 .popup-text {
     padding: 0 36px;
     line-height: 1.4;
+    color: #000;
 }
 .popup-text p:not(:last-child) {
     margin-bottom: 10px;
 }
 .popup-btn {
-    background-color: #333;
+    background-color: #5e7c60;
     margin-top: 20px;
     margin-left: 50%;
     transform: translate(-50%);
@@ -448,11 +460,12 @@ body {
 
 /* footer */
 .footer {
-    height: 20vh;
+    margin-top: 15px;
+    height: 7vh;
     background-color: #222;
     text-align: center;
     color: #FFF;
-    padding-top: 9vh;
+    padding-top: 2vh;
 }
 
 
@@ -478,6 +491,9 @@ body {
     .about .legend .desa:nth-child(2) img {
         margin-right: 0px;
     }
+    .about {
+        height: 900px;
+    }
 }
 
 @media screen and (max-width: 800) {
@@ -497,7 +513,7 @@ body {
     }
     .about .legend {
         flex-direction: column-reverse;
-        }
+    }
 }
 
 /* Tablet */
@@ -534,6 +550,9 @@ body {
     .navbar .nav.active{
         right: 0;
     }
+    .hero {
+        margin-top: 70px;
+    }
     .slide-content {
         margin: 0 90px;
     }
@@ -566,12 +585,15 @@ body {
     }
     .about .legend .desa:nth-child(2) img {
         margin-right: 20px;
-        width: 200px;
+        width: 300px;
         margin-top: 45px;
     }
     .hero .heading .desc:nth-child(1) {
     text-align: center;
     margin-top: 30px;
+    }
+    .about {
+        height: 700px;
     }
     .about .legend {
     flex-direction: column-reverse;
@@ -591,6 +613,9 @@ body {
     }
     html {
         font-size: 55%;
+    }
+    .hero {
+        margin-top: 63px;
     }
     .card .card-content h4 {
         font-size: 20px;    
@@ -616,13 +641,23 @@ body {
     width: 150px;
     margin-top: 25px;
     }
+    .about {
+        height: 900px;
+    }
     .about .legend .desa:nth-child(2) img {
         width: 150px;
     }
     .about .legend .desa:nth-child(1) h4 {
         font-size: 22px;
     }
-
+    .popup {
+        margin-top: 10px;
+    }
+    .popup-content {
+        width: 70%;
+        height: 800px;
+        background-color: #fff;
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -663,4 +698,4 @@ body {
     .about .legend .desa:nth-child(2) img {
       width: 170px;
     }
-  }
+}

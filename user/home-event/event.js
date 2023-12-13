@@ -17,6 +17,17 @@ document.addEventListener('click', function(e) {
     }
 });
 
+window.onscroll = function() {
+    let pos = window.pageYOffset;
+    if (pos > 50) {
+        document.getElementById('header').style.top = '-63px';
+    } else {
+        document.getElementById('header').style.top = '0';
+    }
+}
+
+
+
 // Slides
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 3,
@@ -48,21 +59,3 @@ var swiper = new Swiper(".slide-content", {
         
     }
   });
-
-// slides2
-
-//   var swiper = new Swiper(".slide-content", {
-//     slidesPerView: 4,
-//     centeredSlides: true,
-//     spaceBetween: 30,
-//     grabCursor: true,
-//     loopFillGroupWithBlank: true,
-//     pagination: {
-//       el: ".swiper-pagination",
-//       clickable: true,
-//     },
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//       },
-//   });
