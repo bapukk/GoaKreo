@@ -1,3 +1,8 @@
+<?php 
+include '../../function.php';
+$event = query('SELECT * FROM event');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,10 +39,11 @@
             </nav>
             <a href="#" id="line-menu"><i data-feather="menu"></i></a>
         </div>
+
+        <i data-feather="arrow-up-circle" id="scroll-to-top" onclick="scrollToTop()"></i>
 <!-- ----------------------- content --------------------------->
 <!-- ------------------------ home ----------------------------->
         <div class="wisata" id="home">
-            <!-- <h2>Wisata Goa Kreo</h2> -->
         </div>
         <div class="hero" >
             <div class="about-about">
@@ -53,11 +59,6 @@
                 </div>
             </div>
         </div>
-
-        
-
-        
-
 <!-- ------------------------ event ---------------------------->
         <div class="atas2" id="event"></div>
         <div class="atas">
@@ -66,85 +67,28 @@
         <div class="slide-container swiper">
             <div class="slide-content">
                 <div class="card-wrapper swiper-wrapper">
+
+                <?php foreach($event as $even) : ?>
                     <div class="card swiper-slide card-1">
                         <div class="image-content">
                             <span class="overlay"></span>
 
 
                             <div class="card-image">
-                                <img src="asset/monkey.jpg" alt="" class="card-image">
+                                <img src="../../img/<?= $even['gambar'];?>" alt="" class="card-image">
                             </div>
                         </div>
 
                         <div class="card-content">
                             <div class="judul">
-                                <h4 class="name">Sesaji Rowondo</h4>
+                                <h4 class="name"><?= $even['nama']; ?></h4>
                             </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
+                            <p><?= $even['deskripsi']; ?></p>
 
                             <a href="#popup" class="btn">Read More</a>
                         </div>
                     </div>
-
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/monkey2.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Lebaran +3</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popup1" class="btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/monkey3.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Lebaran +7</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popup2" class="btn">Read More</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card swiper-slide">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/gunung.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">puncak</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popup3" class="btn">Read More</a>
-                        </div>
-                    </div>        
+                <?php endforeach;?>
 
                 </div>
             </div>
@@ -181,94 +125,6 @@
                 <a href="#event" class="btn popup-btn">CLOSE</a>
             </div>
         </div>
-
-        <div class="popup" id="popup1">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="w3-container" style="overflow-y: scroll;">
-                    <div class="popup-header">
-                        <h2>Lebaran +3</h2>
-                    </div>
-                    <div class="popup-des">
-                        <h3>tanggal :</h3>
-                        <h3>jam     :</h3>
-                    </div>
-                    <div class="popup-text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                            ellat laborum perferendis rerum recusandae, placeat dolores,
-                             magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                            </p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                                ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                                atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sed esse voluptate optio exercitationem officiis, alias minima magnam! Architecto labore ut molestias aperiam perspiciatis facilis, est porro, rerum enim minima alias aliquid ullam veritatis repellendus corporis laborum nam optio voluptatum necessitatibus quibusdam. Molestiae, maiores? Necessitatibus ratione ipsum, iste hic et recusandae dolorem fugiat quaerat illum officia molestias a ipsa illo facere voluptas est? Quae, neque sint, vero sit rerum eaque eius odit in, similique repellendus perspiciatis et exercitationem. Labore error nihil laboriosam ex illo, provident dignissimos maiores? Natus fugit, totam, autem optio dolorum fugiat unde, harum ducimus animi aut odit?
-                            </p>
-                    </div>
-                    <a href="#event" class="btn popup-btn">CLOSE</a>
-                </div>
-                
-            </div>
-        </div>
-
-        <div class="popup" id="popup2">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Lebaran +7</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#event" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popup3">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Puncak</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#event" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
         <section class="about">
             <div class="about-about">
                 <div class="legend">
@@ -283,306 +139,6 @@
                 </div>
             </div>
         </section>
-
-
-<!-- ------------------------tengah------------------------- -->
-
-        <!-- <div class="tengah" id="eventmissed">
-            <h4>Missed Event</h4>
-        </div>
-        <div class="slide-container">
-            <div class="slide-content">
-                <div class="card-wrapper-two">
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/monkey.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Hari-pekan khusus</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo" class="btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/monkey2.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Pameran dan pertunjukan</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo1" class="btn">Read More</a>
-                        </div>
-                    </div>
-
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/monkey3.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Rapat dan konferensi</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo2" class="btn">Read More</a>
-                        </div>
-                    </div>
-                    
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/gunung.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Peringatan</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo3" class="btn">Read More</a>
-                        </div>
-                    </div>
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/gunung1.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Hadiah khusus</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo4" class="btn">Read More</a>
-                        </div>
-                    </div>        
-                    
-                    <div class="card-two">
-                        <div class="image-content">
-                            <span class="overlay"></span>
-
-
-                            <div class="card-image">
-                                <img src="asset/gunung2.jpg" alt="" class="card-image">
-                            </div>
-                        </div>
-
-                        <div class="card-content">
-                            <div class="judul">
-                                <h4 class="name">Open House</h4>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui optio aspernatur vero, modi laborum ea. Lorem ipsum dolor sit amet.</p>
-
-                            <a href="#popuptwo5" class="btn">Read More</a>
-                        </div>
-                    </div>        
-
-                </div>
-            </div>
-        </div> -->
-<!-- -------------------------------popuptwo------------------------------- -->
-        <!-- <div class="popup" id="popuptwo">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Hari-pekan khusus</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                        magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popuptwo1">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Pameran dan pertunjukan</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popuptwo2">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Rapat dan konferensi</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popuptwo3">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Peringatan</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popuptwo4">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Hadiah khusus</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div>
-
-        <div class="popup" id="popuptwo5">
-            <div class="popup-content">
-                <div class="popup-img">
-                    <img src="asset/monkey.jpg" alt="monkey">
-                    <img src="asset/monkey1.jpg" alt="monkey1">
-                    <img src="asset/monkey2.jpg" alt="monkey2">
-                </div>
-                <div class="popup-header">
-                    <h2>Open House</h2>
-                </div>
-                <div class="popup-des">
-                    <h3>tanggal :</h3>
-                    <h3>jam     :</h3>
-                </div>
-                <div class="popup-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p>
-                </div>
-                <a href="#eventmissed" class="btn popup-btn">CLOSE</a>
-            </div>
-        </div> -->
 
 
 

@@ -33,7 +33,7 @@ $events = query("SELECT * FROM event");
                 <a href="tambah.php"><button class="button2">Tambah</button></a>
             </div>
         <div class="tabel">
-            <table style="overflow-x:auto;">
+            <table>
                 <tr>
                     <th>NO</th>
                     <th>GAMBAR</th>

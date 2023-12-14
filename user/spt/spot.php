@@ -33,35 +33,31 @@
             <a href="#" id="line-menu"><i data-feather="menu"></i></a>
         </div>
 
-        <button id="scroll-to-top" onclick="scrollToTop()">^</button>
+        <i data-feather="arrow-up-circle" id="scroll-to-top" onclick="scrollToTop()"></i>
 
         <div class="empty"></div>
-        <!-- content 1 -->
-        <div class="section">
-            <img src="asset/ikon_goakreo.jpg" alt="">
-            <div class="text">
-                <h1>IKON GOA KREO</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur recusandae asperiores adipisci qui amet, nulla, vel, ex id minima sed modi unde deserunt obcaecati odit voluptate dolorum! Nesciunt, fugit itaque.
-            </div>
-        </p>
-        </div>
-        <!-- content 1 -->
-
-        <!-- content 2 -->
         <div class="section1">
-            <div class="text1">
+            <img src="asset/ikon_goakreo.jpg" alt="" class="img">
+            <div>
+                <h1>IKON GOA KREO</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur recusandae asperiores adipisci qui amet, nulla, vel, ex id minima sed modi unde deserunt obcaecati odit voluptate dolorum! Nesciunt, fugit itaque.</p>
+            </div>
+        </div>
+
+        <div class="section2">
+            <div>
                 <h1>JEMBATAN GOA KREO</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe odio fuga reprehenderit quod soluta. Delectus dolore possimus explicabo id libero asperiores consequuntur, officia sapiente! At deleniti debitis excepturi libero saepe?
             </div>
-            <img src="asset/jembatan_goakreo.jpg" alt="">
+            <img src="asset/jembatan_goakreo.jpg" alt="" class="img">
         </p>
         </div>
         <!-- content 2 -->
 
         <!-- content 3 -->
-        <div class="section2">
-            <img src="asset/tangga_goakreo.jpg" alt="">
-            <div class="text2">
+        <div class="section1">
+            <img src="asset/tangga_goakreo.jpg" alt="" class="img">
+            <div>
                 <h1>TANGGA GOA KREO</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa aperiam, distinctio soluta cumque necessitatibus quis sequi aut sunt ducimus molestias asperiores vero tempora harum quam dicta quae, odio similique culpa.
             </div>
@@ -70,20 +66,20 @@
         <!-- content 3 -->
 
         <!-- content 4 -->
-        <div class="section3">
-            <div class="text3">
+        <div class="section2">
+            <div>
                 <h1>GOA KREO</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, exercitationem maiores iure inventore fuga veniam neque vel magnam, sapiente quis dolores iusto alias, vero totam? Eius dicta modi sapiente alias.
             </div>
-            <img src="asset/pic_goakero.jpg" alt="">
+            <img src="asset/pic_goakero.jpg" alt="" class="img">
         </p>
         </div>
         <!-- content 4 -->
 
         <!-- content 5 -->
-        <div class="section4">
-            <img src="asset/pic_goalandak.jpg" alt="">
-            <div class="text4">
+        <div class="section1">
+            <img src="asset/pic_goalandak.jpg" alt="" class="img">
+            <div>
                 <h1>GOA LANDAK</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora culpa rem beatae soluta asperiores at enim numquam adipisci provident illum. Tenetur non et magnam ratione voluptatem sed saepe vero corporis?
             </div>

@@ -59,6 +59,20 @@ body {
     color: #333;
 }
 
+#scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5e7c60;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    width: 45px;
+    height: 45px;
+  }  
+
 #line-menu {
     display: none;
     color: #000;
@@ -112,10 +126,6 @@ body {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-}
-.about .legend .desa:nth-child(1),
-.hero .heading .desc:nth-child(1) {
-    padding-right: 30px;
 }
 .desc {
     text-align: center;
@@ -186,8 +196,15 @@ body {
 }
 .card { 
     width: 300px;
+    height: 450px;
+    overflow: auto;
     border-radius: 25px 25px;
     background-color: #F9F5F2;
+}
+.card p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .image-content,
 .card-content {
@@ -208,7 +225,6 @@ body {
     position: relative;
     left: 0;
     top: 0;
-    height: 100%;
     width: 100%;
     border-radius: 25px 25px 0px 0px;
 }
@@ -225,11 +241,7 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-/* .tanggal {border: 1px solid green;
-    font-size: 18px;
-    font-weight: 500;
-    color: #fff; 
-}*/
+
 .card-content  p {
     margin: 0 auto;
     font-size: 14px;
@@ -237,10 +249,7 @@ body {
     text-align: center;
     line-height: 2;
     width: 300px;
-    /* text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; */
+
 }
 .btn {
     outline: none;
@@ -305,7 +314,7 @@ body {
     background-color: #fff;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     margin-top: 36px;
-
+    overflow: auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -391,72 +400,7 @@ body {
     opacity: 1;
     transform: translate(-50%,-50%) scale(1);
 }
-/* --------------------------------------------popuptwo------------------------------------------ */
 
-#popuptwo:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-#popuptwo1:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo1:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-#popuptwo2:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo2:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-#popuptwo3:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo3:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-#popuptwo4:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo4:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-#popuptwo5:target {
-    opacity: 1;
-    visibility: visible;
-}
-#popuptwo5:target .popup-content {
-    opacity: 1;
-    transform: translate(-50%,-50%) scale(1);
-}
-/* ----------------------------------------------------------------------------tangah--------------------------------------------------- */
-
-
-.card-wrapper-two {
-    display: flex;
-    overflow-x: auto;
-}
-.card-wrapper-two::-webkit-scrollbar {
-    width: 1px;
-}
-.card-two {
-    justify-content: space-between;
-    text-align: center;
-    margin-right: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
 /* footer */
 .footer {
@@ -642,13 +586,16 @@ body {
     margin-top: 25px;
     }
     .about {
-        height: 900px;
+        height: auto;
     }
     .about .legend .desa:nth-child(2) img {
         width: 150px;
     }
     .about .legend .desa:nth-child(1) h4 {
         font-size: 22px;
+    }
+    .about .legend .desa:nth-child(1) p {
+        text-align: justify;
     }
     .popup {
         margin-top: 10px;
@@ -675,6 +622,9 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     }
+    .hero{
+        height: auto;
+    }
     .desc h4 {
     font-size: 15px;
     }
@@ -685,7 +635,10 @@ body {
 
     .desc img {
     width: 170px;
-    margin-top: 60px;
+    margin-top: 30px;
+    }
+    .about {
+        height: auto;
     }
     .about .legend .desa:nth-child(1) h4 {
       font-size: 15px;
@@ -693,6 +646,7 @@ body {
   
     .about .legend .desa:nth-child(1) p {
       font-size: 10px;
+      text-align: justify;
     }
   
     .about .legend .desa:nth-child(2) img {
