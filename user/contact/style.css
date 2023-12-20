@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #727272;
+    min-height: 100vh;
+}
+.container{
+        min-height: 100vh;
+        display: flex;
+        text-align: center;
+        background-image: url(../asset/bg.jpg );
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+    }
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #5E7C60 ;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+#logo {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 5px;
+    padding-left: 20px;
+    color: #F9F5F2;
+}
+
+.navbar .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 60px;
+}
+
+.navbar ul li a{
+    color: #F9F5F2;
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+.navbar ul li a:hover {
+    color: #333;
+}
+
+#line-menu {
+    display: none;
+    color: #F9F5F2;
+    padding: 5px;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    color: #000000;
+    position: absolute;
+    background-color: #D5D6C6;
+    bottom: 0%;
+    padding: 100px;
+}
+
+.contact-info a{
+    display: block;
+    color: #000000;
+}
+
+.mail, .pin, .ig{
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 15px;
+}
+/*  */
+/*  */
+/* Kritik dan saran */
+.main{
+    width: 100%;
+    height: 80vh;
+    background-color:#F9F5F2;
+    display: flex;
+    
+}
+.main .map{
+    margin-left: 12%;
+    margin-top: 5%;
+    height: 20%;
+}
+
+.contact-form {
+    display: block;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 4rem;
+    width: 35rem;
+}
+
+form h3{
+    color:#000000;
+    font-weight: 800;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 30px;
+    background: #fff;
+    font-size:  1rem;
+    border-bottom: 2px solid #5E7C60 ;
+}
+form button{
+    padding: 15px;
+    background: #5E7C60;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
+textarea {
+    resize:vertical;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #line-menu{
+        display: block;
+    }
+
+    .navbar .nav {
+        position: fixed;
+        right: 100%;
+        top: 5.69rem;
+        gap: 0;
+        flex-direction: column;
+        background-color: #ffffff;
+        width: 15rem;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .navbar .nav a{
+        display: block;
+        padding: 1rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .navbar .nav.active{
+        right: 0;
+    }
+
+}
+
+/* Phone */
+@media (max-width: 500px) {
+    html {
+        font-size: 55%;
+    }
+    .contact-info {
+        padding: 3rem;
+    }
+}
