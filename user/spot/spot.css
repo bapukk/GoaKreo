@@ -7,7 +7,9 @@
   text-decoration: none;
   list-style: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #727272;
@@ -17,7 +19,6 @@ body {
   background-position: center;
   background-attachment: fixed;
 }
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -29,25 +30,33 @@ body {
   right: 0;
   z-index: 9999;
 }
-
 .header.hidden {
   display: none;
 }
-
-#scroll-to-top {
+#progress {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  background-color: #5e7c60;
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
+  right: 10px;
+  height: 70px;
+  width: 70px;
   display: none;
-  width: 45px;
-  height: 45px;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 20000;
 }
-
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #333;
+}
 #logo {
   font-size: 3rem;
   font-weight: 700;
@@ -55,16 +64,12 @@ body {
   padding-left: 20px;
   color: #fff;
 }
-
 #logo .goa {
   color: #fff;
 }
-
 #logo .kreo {
-  color: #000;
+  color: #333;
 }
-
-
 .navbar .nav {
   display: flex;
   justify-content: space-between;
@@ -72,30 +77,23 @@ body {
   padding: 20px;
   gap: 60px;
 }
-
 .navbar ul li a {
   color: #fff;
   font-weight: 300;
   font-size: 1.5rem;
 }
-
 .navbar ul li a:hover {
   color: #333;
 }
-
 #line-menu {
   display: none;
   color: #fff;
   padding: 5px;
 }
-
-/* empty div */
-
 .empty {
   height: 65px;
   background-color: #f9f5f2;
 }
-
 .section1 {
   background-color: #f9f5f2;
   display: flex;
@@ -106,7 +104,6 @@ body {
   height: auto;
   bottom: 0;
 }
-
 .section1 img {
   height: 250px;
   width: auto;
@@ -114,16 +111,13 @@ body {
   align-self: flex-start;
   margin-right: 20px;
 }
-
 .section1 h1 {
   margin: 0;
   color: black;
 }
-
 .section1 p {
   color: black;
 }
-
 .section2 {
   background-color:#d5d6c6;
   display: flex;
@@ -133,37 +127,30 @@ body {
   height: auto;
   bottom: 0;
 }
-
 .section2 img {
   height: 250px;
   border-radius: 5%;
   margin-left: 20px;
 }
-
 .section2 h1 {
   margin: 0;
   color: black;
 }
-
 .section2 p {
   color: black;
 }
-
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
   }
 }
-
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
-
   #line-menu {
     display: block;
   }
-
   .navbar .nav {
     position: fixed;
     right: 100%;
@@ -175,18 +162,15 @@ body {
     text-align: center;
     border-radius: 10px;
   }
-
   .navbar .nav a {
     display: block;
     padding: 1rem;
     color: rgb(0, 0, 0);
   }
-
   .navbar .nav.active {
     right: 0;
   }
 }
-
 @media (max-width: 450px) {
   html {
     font-size: 55%;
@@ -199,11 +183,9 @@ body {
       text-align: center;
   }
 }
-
   .section1 img {
       margin-bottom: 10px;
   }
-
 @media (max-width: 450px) {
   .section1 img {
       height: 150px;
@@ -215,31 +197,26 @@ body {
     height: 30px;
   }
 }
-
 @media (max-width: 768px) {
   .section2 {
       flex-direction: column;
       align-items: center;
       text-align: center;
   }
-
   .section2 img {
       margin-bottom: 10px;
       align-self: flex-start;
       margin-left: 0;
   }
-
   .section2 p {
     margin-top: 10px;
 }
 }
-
 @media (max-width: 450px) {
   .section2 img {
       height: 150px;
       margin-bottom: 10px;
   }
-
   .section2 p {
     margin-top: 10px;
 }

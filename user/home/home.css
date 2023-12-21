@@ -22,7 +22,6 @@ body {
 .container {
     height: 100vh;
 }
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -34,15 +33,13 @@ body {
     right: 0;
     z-index: 9999;
 }
-
 #logo {
     font-size: 3rem;
     font-weight: 700;
     padding: 5px;
     padding-left: 20px;
-    color: #ffff;
+    color: #333;
 }
-
 .navbar .nav {
     display: flex;
     justify-content: space-between;
@@ -50,23 +47,19 @@ body {
     padding: 20px;
     gap: 60px;
 }
-
 .navbar ul li a{
     color: #fff;
     font-weight: 300;
     font-size: 1.5rem;
 }
-
 .navbar ul li a:hover {
     color: #333;
 }
-
 #line-menu {
     display: none;
     color: #000;
     padding: 5px;
 }
-
 .atas {
     color: #000;
     padding-left: 70px;
@@ -86,34 +79,6 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
 }
-/* .wisata {
-    margin-top: 80px;
-} */
-#progress {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    height: 70px;
-    width: 70px;
-    display: none;
-    place-items: center;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 20000;
-}
-#progress-value {
-    display: block;
-    height: calc(100% - 15px);
-    width: calc(100% - 15px);
-    background-color: #fff;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    font-size: 35px;
-    color: #333;
-}
-/* ----------------------------------------------------------------------------home------------------------------------------------------- */
 
 .hero {
     margin-top: 80px;
@@ -139,7 +104,6 @@ body {
     -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }
-
 .desc {
     text-align: center;
     color: #333;
@@ -164,15 +128,14 @@ body {
 }
 .desc p {
     line-height: 2;
-    font-size: 12px;
+    font-size: 20px;
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 16px;
 }
 .about .legend .desa:nth-child(1) p {
-
     line-height: 2;
-    font-size: 12px;
+    font-size: 15px;
     margin-right: 50px;
     margin-left: 50px;
     margin-bottom: 16px;
@@ -184,15 +147,11 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 .about .legend .desa:nth-child(2) img {
-
     border-radius: 5%;
     width: 400px;
     margin-right: 100px;
 }
-
-/* --------------------------------------------------------------------------slides --------------------------------------------------------*/
 .slide-container {
     width: 100%;
     background-color: #D5D6C6;
@@ -209,7 +168,6 @@ body {
 .card {
     width: 300px;
     height: 550px;
-
     border-radius: 25px 25px;
     background-color: #F9F5F2;
 }
@@ -254,7 +212,6 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 .card-content  p {
     margin: 0 auto;
     font-size: 14px;
@@ -262,7 +219,6 @@ body {
     text-align: center;
     line-height: 2;
     width: 350px;
-
 }
 .btn {
     outline: none;
@@ -305,7 +261,6 @@ body {
 .swiper-pagination-bullet-active {
     background-color: #f2f9f6;
 }
-/*------------------------------------------------------------------------- review-slides ---------------------------------------------------*/
 .popup {
     width: 100%;
     height: 100vh;
@@ -393,9 +348,6 @@ body {
     transform: translate(-50%);
     margin-bottom: 20px;
 }
-
-
-/* footer */
 .footer {
     margin-top: 15px;
     height: 7vh;
@@ -404,11 +356,6 @@ body {
     color: #FFF;
     padding-top: 2vh;
 }
-
-
-/* Media Queries */
-
-/* Laptop */
 @media (max-width: 1366px) {
     html {
         font-size: 75%;
@@ -417,13 +364,11 @@ body {
         width: 300px;
     }
 }
-
 @media (max-width: 1052px) {
     .card-content p {
         width: 250px;
     }
 }
-
 @media screen and (max-width: 1200) {
     .about .legend .desa:nth-child(2) img {
         margin-right: 0px;
@@ -432,9 +377,7 @@ body {
         height: 900px;
     }
 }
-
 @media screen and (max-width: 800) {
-    
     .hero .heading {
         flex-direction: column;
     }
@@ -453,8 +396,6 @@ body {
         flex-direction: column-reverse;
     }
 }
-
-/* Tablet */
 @media (max-width: 768px) {
     .wisata {
         font-size: 25px;
@@ -462,11 +403,9 @@ body {
     html {
         font-size: 62.5%;
     }
-
     #line-menu{
         display: block;
     }
-
     .navbar .nav {
         position: fixed;
         right: 100%;
@@ -478,13 +417,11 @@ body {
         text-align: center;
         border-radius: 10px;
     }
-
     .navbar .nav a{
         display: block;
         padding: 1rem;
         color: rgb(0, 0, 0);
     }
-
     .navbar .nav.active{
         right: 0;
     }
@@ -544,8 +481,6 @@ body {
     }
 
 }
-
-/* Phone */
 @media screen and (max-width: 450px) {
     .wisata {
         font-size: 20px;
@@ -604,7 +539,6 @@ body {
         background-color: #fff;
   }
 }
-
 @media screen and (max-width: 375px) {
     .wisata {
         font-size: 16px;
@@ -626,30 +560,24 @@ body {
     .desc h4 {
     font-size: 15px;
     }
-
     .desc p {
     font-size: 10px;
     text-align: justify;
     }
-
-
     .desc img {
     width: 170px;
     margin-top: 30px;
     }
     .about {
         height: auto;
-        
     }
     .about .legend .desa:nth-child(1) h4 {
       font-size: 15px;
     }
-  
     .about .legend .desa:nth-child(1) p {
       font-size: 10px;
       text-align: justify;
     }
-  
     .about .legend .desa:nth-child(2) img {
       width: 170px;
     }

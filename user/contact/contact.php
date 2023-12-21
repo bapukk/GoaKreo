@@ -4,23 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goa Kreo</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Style -->
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="style.css">
-
-
+    <title>Goa Kreo</title>
 </head>
 
 <body>
     <div class="container">
-
         <div class="header">
             <a href="#home" id="logo">GOA <span style="color: #333;font-weight: bold;">KREO</span></a>
             <nav class="navbar">
@@ -41,18 +34,14 @@
             </div>
             <div class="contact-2">
                 <i class="pin" data-feather="map-pin"></i>
-                <a align="center" href="">Jalan mana nih center sampai bawah teneneng</a>
-
+                <a align="center" href="">Jl. Raya Goa Kreo, Kandri, Kec. Gn. Pati, Kota Semarang, Jawa Tengah</a>
             </div>
             <div class="contact-3">
-                <i class="ig" data-feather="instagram"></i>
-                <a href="https://www.instagram.com/obyekwisatagoakreo/#">Instagram</a>
-
+                <a href="https://www.instagram.com/obyekwisatagoakreo/" target="_blank"><i class="ig"
+                        data-feather="instagram"></i></a>
+                <a href="https://www.instagram.com/obyekwisatagoakreo/" target="_blank">Obyek Wisata Goa Kreo</a>
             </div>
-
-
         </div>
-
     </div>
     <div class="main">
         <div class="contact-form">
@@ -71,18 +60,11 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
-
     <div class="footer"></div>
-    <!-- Feather Icons -->
-
     <script>
         feather.replace();
     </script>
-    <!-- JS -->
     <script src="script.js"></script>
-
-
-
 </body>
 
 </html>

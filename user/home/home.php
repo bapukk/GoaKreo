@@ -8,29 +8,17 @@ $event = query('SELECT * FROM event');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goa Kreo</title>
-
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Swipper -->
-    <!-- Style -->
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="stylesheet" href="swiper-bundle.min.css">
     <link rel="stylesheet" href="home.css">
-
-
-
+    <title>Goa Kreo</title>
 </head>
 
 <body>
     <div class="container">
-        <div id="progress">
-            <span id="progress-value">&#x1F815</span>
-        </div>
-
         <div class="header" id="header">
             <a href="#home" id="logo">GOA <span style="color: #333;">KREO</span></a>
             <nav class="navbar">
@@ -52,7 +40,7 @@ $event = query('SELECT * FROM event');
             <div class="about-about">
                 <div class="heading">
                     <div class="desc">
-                        <img src="asset/gbr.jpeg" alt="">
+                        <img src="../asset/gbr.jpeg" alt="">
                     </div>
                     <div class="desc">
                         <h4>Apa itu Goa Kreo?</h4>
@@ -64,12 +52,30 @@ $event = query('SELECT * FROM event');
                 </div>
             </div>
         </div>
-
-
-
-
-
-        <!-- ------------------------ event ---------------------------->
+        <section class="about">
+            <div class="about-about">
+                <div class="legend">
+                    <div class="desa">
+                        <h4>Legenda Goa Kreo</h4>
+                        <p>Dikisahkan saat sunan kalijaga bersama 4 santrinya diutus keselatan yaitu dijatingaleh
+                            semarang untuk mencari kayu jati yang akan digunakkan sebagai tiang masjid agung Demak.
+                            disaat para santri akan menebang kayu jati disitu ada kawanan 4 monyet
+                            (kuning,merah,hitam,putih). Kawanan monyet tidak setuju dengan penebangan tersebut, lalu
+                            terjadi perkelahian yang dimenangkan sunan kalijaga. Akhirnya kawanan monyet ikut membantu 4
+                            santri menebang pohon jati, kemudian kayu tersebut dihanyutkan kesungai namun tersangkut.
+                            Dari situlah sunan kalijaga menemukan ada goa dan bertapa meminta petunjuk agar kayu ini
+                            dapat jalan. setelah sunan kalijaga mendapat petunjuk dan kayu itu bisa
+                            berjalan(hanyut),sunan kalijaga melanjutkan perjalanan pulang. Namun 4 monyet itu meminta
+                            ikut ke daerah demak tapi tidak diperbolehkan dan disuruh menjaga(kreo). Maka jadilah Gua
+                            Kreo. Kata "Kreo" berasal dari Mangreho yang berarti penjaga.
+                        </p>
+                    </div>
+                    <div class="desa">
+                        <img src="../asset/gbr.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="atas2" id="event"></div>
         <div class="atas">
             <h4>EVENT</h4>
@@ -81,13 +87,10 @@ $event = query('SELECT * FROM event');
                         <div class="card swiper-slide card-1">
                             <div class="image-content">
                                 <span class="overlay"></span>
-
-
                                 <div class="card-image">
-                                    <img src="asset/monkey.jpg" alt="" class="card-image">
+                                    <img src="../../img/<?= $even['gambar']; ?>" alt="" class="card-image">
                                 </div>
                             </div>
-
                             <div class="card-content">
                                 <div class="judul">
                                     <h4 class="name">
@@ -110,87 +113,42 @@ $event = query('SELECT * FROM event');
             <div class="swiper-button-prev swiper-navBtn"></div>
             <div class="swiper-pagination"></div>
         </div>
-
-        <!-- --------------------------popup-------------------------- -->
         <?php foreach ($event as $even): ?>
             <div class="popup" id="popup<?= $even['id']; ?>">
                 <div class="popup-content">
                     <div class="popup-img">
-                        <img src="asset/monkey.jpg" alt="monkey">
-                        <img src="asset/monkey1.jpg" alt="monkey1">
-                        <img src="asset/monkey2.jpg" alt="monkey2">
+                        <img src="../../img/<?= $even['gambar']; ?>" alt="monkey">
+                        <img src="../../img/<?= $even['gambar']; ?>" alt="monkey1">
+                        <img src="../../img/<?= $even['gambar']; ?>" alt="monkey2">
                     </div>
                     <div class="popup-header">
-                        <h2><?= $even['nama'];?></h2>
+                        <h2>
+                            <?= $even['nama']; ?>
+                        </h2>
                     </div>
                     <div class="popup-des">
-                        <h3>tanggal : <?= $even['tanggal']; ?></h3>
-                        <h3>jam :</h3>
+                        <h3>tanggal :
+                            <?= $even['tanggal']; ?>
+                        </h3>
                     </div>
                     <div class="popup-text">
                         <p>
                             <?= $even['deskripsi']; ?>
                         </p>
-                        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, iure? Unde neque nulla rep
-                        ellat laborum perferendis rerum recusandae, placeat dolores,
-                         magnam quam molestias porro sed aliquam mollitia optio, aliquid maxime.
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quisquam, modi molestias et labore 
-                            ratione accusantium sint illo inventore dolores ea eum totam veniam iste nostrum hic magni pari
-                            atur architecto necessitatibus voluptatibus at! Illum nam tempore doloremque minima, laborum itaque dicta dolores aliquid repellat?
-                        </p> -->
-
                     </div>
                     <input type="button" class="btn popup-btn" id="<?= $even['id']; ?>" value="CLOSE">
-                    <!-- <button class="btn popup-btn" id="" onclick="classList.remove('open-popup')">CLOSE</button> -->
                 </div>
             </div>
         <?php endforeach; ?>
-
-        <section class="about">
-            <div class="about-about">
-                <div class="legend">
-                    <div class="desa">
-                        <h4>Legenda Goa Kreo</h4>
-                        <p>Dikisahkan saat sunan kalijaga bersama 4 santrinya diutus keselatan yaitu dijatingaleh
-                            semarang untuk mencari kayu jati yang akan digunakkan sebagai tiang masjid agung Demak.
-                            disaat para santri akan menebang kayu jati disitu ada kawanan 4 monyet
-                            (kuning,merah,hitam,putih). Kawanan monyet tidak setuju dengan penebangan tersebut, lalu
-                            terjadi perkelahian yang dimenangkan sunan kalijaga. Akhirnya kawanan monyet ikut membantu 4
-                            santri menebang pohon jati, kemudian kayu tersebut dihanyutkan kesungai namun tersangkut.
-                            Dari situlah sunan kalijaga menemukan ada goa dan bertapa meminta petunjuk agar kayu ini
-                            dapat jalan. setelah sunan kalijaga mendapat petunjuk dan kayu itu bisa
-                            berjalan(hanyut),sunan kalijaga melanjutkan perjalanan pulang. Namun 4 monyet itu meminta
-                            ikut ke daerah demak tapi tidak diperbolehkan dan disuruh menjaga(kreo). Maka jadilah Gua
-                            Kreo. Kata "Kreo" berasal dari Mangreho yang berarti penjaga.
-                        </p>
-                    </div>
-                    <div class="desa">
-                        <img src="asset/gbr.jpeg" alt="">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!------------------------- footer ------------------------------->
-
         <div class="footer">
             <p> Copyright &copy; Team Almithali</p>
         </div>
-
     </div>
-
-    <!-- Feather Icons -->
     <script>
         feather.replace();
     </script>
-    <!-- JS -->
     <script src="swiper-bundle.min.js"></script>
     <script src="home.js"></script>
-
-
 </body>
 
 </html>
